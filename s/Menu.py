@@ -1,10 +1,9 @@
 import os
 
-# from s import DataAnalyzer, DataVisualizer
-from s.DataHandler import DataHandler
-from s.FileManager import FileManager
-from s.DataVisualizer import DataVisualizer
 from s.DataAnalyzer import DataAnalyzer
+from s.DataHandler import DataHandler
+from s.DataVisualizer import DataVisualizer
+from s.FileManager import FileManager
 
 
 class Menu:

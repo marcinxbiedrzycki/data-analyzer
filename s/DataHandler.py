@@ -1,14 +1,11 @@
 import pandas as pd
 
-from s import CSVHandler
-
 
 class DataHandler:
     def __init__(self, file_path, file_type="csv"):
         self.file_path = file_path
         self.data = self.load_data(file_type)
 
-## tutaj można by z wzorców pokorzystać, 2 strategię/fabryki csv i json interfejs z metodą load data
     def load_data(self, file_type):
         try:
             if file_type == "csv":
@@ -38,13 +35,6 @@ class DataHandler:
 
         else:
             print("No data loaded. Please load the CSV file first.")
-
-    # def sort_data(self, column, ascending=True):
-    #     try:
-    #         sorted_data = self.data.sort_values(by=column, ascending=ascending)
-    #         print(sorted_data)
-    #     except KeyError:
-    #         raise ValueError(f"Column '{column}' does not exist in the dataset.")
 
     def sort_data(self, column, ascending=True):
         if self.data is not None:

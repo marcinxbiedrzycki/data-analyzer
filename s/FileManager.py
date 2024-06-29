@@ -12,4 +12,4 @@ class FileManager:
             ]
         except FileNotFoundError:
             print("Directory not found.")
-            return []
+        return []
